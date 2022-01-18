@@ -1,3 +1,11 @@
+/*Create an array of 10 students and print the record of those students who got the highest marks and who got minimum marks. The structure of student class is as follows
+class Student
+{
+    private int rollno;
+    private int marks
+    private String name;
+}
+ create constructor or getter and setter methods as per need*/
 import java.util.Scanner;
 
 public class q1
@@ -14,18 +22,14 @@ public class q1
     public static void main(String[] args)
 
     {
-
-        // creating an array that will hold 5 student objects
         q1 arr[] = new q1[10];
-
-        // initializing the array with Student object
         Scanner s = new Scanner(System.in);
         for (int i = 0; i <arr.length ; i++)
         {
-            arr[i]= new q1(s.nextInt(),s.next(),s.nextInt()); // object creation
+            arr[i]= new q1(s.nextInt(),s.next(),s.nextInt());
         }
 
-        // traverse/print all the objects value stored in array
+
         for (int i = 0; i <arr.length ; i++)
         {
             System.out.println(arr[i].rollno + "\t" + arr[i].name+ "\t"+ arr[i].marks);
