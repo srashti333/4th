@@ -14,7 +14,7 @@ class TimeInterval
     {
         int start[] =new int[arr.length];
         int end[]= new int[arr.length];
-        for(int i=0;i<arr.length;i++){                              //debug this
+        for(int i=0;i<arr.length;i++){                              //debug this for loop
             start[i]=arr[i].start;
             end[i]=arr[i].end;
         }
@@ -54,3 +54,4 @@ public class GLA
         System.out.println(TimeInterval.canAttendMeeting(arr));
     }
 }
+//time complexity : O(n)
