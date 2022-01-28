@@ -2,7 +2,7 @@ public class Test90 {
     public static void ans(String inp, String ans)
     {
 
-
+//
         if(inp.length() ==0 )
         {
             System.out.println(ans);
