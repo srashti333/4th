@@ -1,18 +1,30 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-class TimeInterval
+class GLA1
 {
     int start;
     int end;
-    public TimeInterval(int start,int end)
+    public GLA1(int start,int end)
     {
         this.start=start;
         this.end=end;
     }
     public static boolean canAttendMeeting(TimeInterval[] arr)
     {
-        int start[] =new int[arr.length];
+        int[] start;
+        start = new int[arr.length];
+        dup(arr, start);
+        int[] end = new int[arr.length];
+        for(int i=0;i<start.length-1;i++) {
+            if (start[i + 1] >= end[i]) {
+                return true;
+            }
+        }
+            return false;
+    }
+
+    static void dup(TimeInterval[] arr, int[] start) {
         int end[]= new int[arr.length];
         for(int i=0;i<arr.length;i++){                              //debug this for loop
             start[i]=arr[i].start;
@@ -20,12 +32,6 @@ class TimeInterval
         }
         Arrays.sort(start);
         Arrays.sort(end);
-        for(int i=0;i<start.length-1;i++) {
-            if (start[i + 1] >= end[i]) {
-                return true;
-            }
-        }
-            return false;
     }
 }
 public class GLA

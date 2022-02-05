@@ -1,5 +1,6 @@
 //structure of a node class for singly linked list
 class Node {
+    public boolean next;
     int data;
     Node bext; //self refrential structure to hold the reference of the next element
     public Node(int data)
@@ -8,10 +9,12 @@ class Node {
     }
 }
 
+
 //
 //lll
 class SinglyLinkedList
 {
+    public int next;
     Node head;
     public void insertAtLast(Node newnode)
     {
@@ -21,19 +24,19 @@ class SinglyLinkedList
         }
         else
         {
+            int next;
             Node temp=head;
-            while(temp.next!=null)
+            while(temp!=null)
             {
-                temp =temp.next=newnode;
+                temp =newnode;
             }
         }
     }
-}
-public class ttt{
+
     public static  void main(String args[])
     {
         SinglyLinkedList obj1=new SinglyLinkedList();
         obj1.insertAtLast(new Node(10));
-        obj1.display();
+
     }
 }
